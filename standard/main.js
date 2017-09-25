@@ -1,0 +1,22 @@
+requirejs.config({
+    baseUrl:"../asset",
+    paths:{
+        "jquery":"./jquery/jquery-1.9.1.min",
+        "swiper":"./swiper/js/swiper.jquery.min",
+        "bootstrap":"./bootstrap/js/bootstrap.min",
+        "text":"./require/text",
+        "js":"../standard/js",
+        "tpls":"../standard/tpls"
+    },
+    shim:{
+        bootstrap:{
+            deps:["jquery"]
+        }
+    }
+})
+;
+require(["js/core.js"],function(){
+    console.log(
+        "我是main.js"
+    )
+})

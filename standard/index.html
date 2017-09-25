@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <link rel="stylesheet" href="../asset/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../asset/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_352112_r2nmlu8jd5a8m2t9.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" type="text/less" href="less/style.less">
+    <script>
+        less = {
+            env: "development",
+            logLevel: 2,
+            async: false,
+            fileAsync: false,
+            poll: 1000,
+            functions: {},
+            dumpLineNumbers: "comments",
+            relativeUrls: false,
+            globalVars: {
+                var1: '"string value"',
+                var2: 'regular value'
+            },
+            rootpath: ":/a.com/"
+        };
+    </script>
+    <script src="../asset/less/less.2.5.3.js"></script>
+    <script>less.watch()</script>
+    <!--[if lt IE 9]>
+    <script src="../asset/html5shiv/html5shiv.min.js"></script>
+    <script src="../asset/respond/respond.min.js"></script>
+    <![endif]-->
+    <title>前端规范 -针对响应式开发</title>
+</head>
+<body data-spy="scroll" data-target="#navbar-example">
+<!--nav start-->
+<nav class="navbar navbar-default norm-nav">
+    <div class="container clearfix">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">前端开发规范</a>
+        </div>
+        <div style="clear: both"></div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav" id="routing-nav">
+                <li><a href="javaScript:;" data-click="projectTpl" class="active">项目结构搭建<span
+                        class="sr-only">(current)</span></a></li>
+                <li><a href="javaScript:;" data-click="HCJTpl">html/css/js(jquery)规范</a></li>
+                <li><a href="javaScript:;" data-click="bootstrapTpl">bootstrap框架的使用</a></li>
+                <li><a href="javaScript:;" data-click="iconTpl">common.cs/字体图标</a></li>
+                <li class="hidden-sm" data-click="pluginTpl"><a href="javaScript:;" data-click="pluginTpl">常用插件的API</a>
+                </li>
+                <li class="hidden-md hidden-sm"><a href="javaScript:;" data-click="pluginTpl">less+css使用规范</a></li>
+                <li class="hidden-md hidden-sm"><a href="javaScript:;" data-click="pluginTpl">前端组件、插件封装</a></li>
+                <li class="dropdown hidden-lg hidden-xs">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">更多 <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li class="hidden-lg hidden-md hidden-sm"><a href="javaScript:;" data-click="iconTpl">common.cs/字体图标</a>
+                        </li>
+                        <li class="hidden-md"><a href="javaScript:;" data-click="pluginTpl">常用插件的API</a></li>
+                        <li><a href="javaScript:;" data-click="pluginTpl">less+css使用规范</a></li>
+                        <li><a href="javaScript:;" data-click="pluginTpl">前端组件、插件封装</a></li>
+                    </ul>
+                </li>
+                <!--<li><a href="https://www.awesomes.cn" target="_blank" class="">A<sub>wesome</sub></a></li>-->
+                <!--<li><a href="http://v3.bootcss.com" target="_blank" class="">B<sub>ootstrap</sub></a></li>-->
+                <!--<li><a href="http://v3.bootcss.com" target="_blank" class="">I<sub>confont</sub></a></li>-->
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+<!--nav end-->
+
+<!--content start-->
+<div class="container clearfix norm-content" id="middle-content">
+
+</div>
+<!--content end-->
+<script data-main="main" src="../asset/require/require.js"></script>
+</body>
+</html>

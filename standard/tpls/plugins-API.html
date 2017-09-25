@@ -1,0 +1,150 @@
+<div class="plugin-API">
+    <div class="panel panel-warning">
+        <div class="panel-heading">
+            <h1 class="panel-title">
+                fullpage.js
+            </h1>
+        </div>
+        <div class="panel-body">
+            <div class="panel panel-warning">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        简介
+                    </h3>
+                </div>
+                <div class="panel-body">
+                    <ul class="list-group">
+                        <li class="list-group-item"> fullPage.js 是一个基于 jQuery 的插件，它能够很方便、很轻松的制作出全屏网站，主要功能有：</li>
+                        <li class="list-group-item ar"> 支持鼠标滚动</li>
+                        <li class="list-group-item ar">支持前进后退和键盘控制</li>
+                        <li class="list-group-item ar">多个回调函数</li>
+                        <li class="list-group-item ar">支持手机、平板触摸事件</li>
+                        <li class="list-group-item ar">支持 CSS3 动画</li>
+                        <li class="list-group-item ar">支持窗口缩放</li>
+                        <li class="list-group-item ar">窗口缩放时自动调整</li>
+                        <li class="list-group-item ar"> 可设置滚动宽度、背景颜色、滚动速度、循环选项、回调、文本对齐方式等等。</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="panel panel-warning">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        使用方法
+                    </h3>
+                </div>
+                <div class="panel-body">
+                    <div class="panel panel-warning">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                引入资源
+                            </h4>
+                        </div>
+                        <div class="panel-body">
+                            <pre>
+                                <xmp>
+                                    <link rel="stylesheet" href="css/jquery.fullPage.css">
+                                    <script src="js/jquery.min.js"></script>
+                                    <script src=“js/fullpage.js”></script>
+                                </xmp>
+                            </pre>
+                        </div>
+                    </div>
+                    <div class="panel panel-warning">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                Html模板
+                            </h4>
+                        </div>
+                        <div class="panel-body">
+                            <pre>
+                                <xmp>
+                                    <div id="wrapper">
+                                        <div class="section">
+                                            <h3>第一屏</h3>
+                                        </div>
+                                        <div class="section">
+                                            <h3>第二屏</h3>
+                                        </div>
+                                        <div class="section">
+                                            <h3>第三屏</h3>
+                                        </div>
+                                        <div class="section">
+                                            <h3>第四屏</h3>
+                                        </div>
+                                    </div>
+
+                                </xmp>
+                            </pre>
+                            <p>
+                                每个 section 代表一屏，默认显示“第一屏”，如果要指定加载页面时显示的“屏幕”，可以在对应的 section 加上 class=”active”，如：
+                            </p>
+                            <pre>
+                                <xmp>
+                                    <div class="section active">第三屏</div>
+                                </xmp>
+                            </pre>
+                            <p>同时，可以在 section 内加入 slide，如：</p>
+                            <pre>
+                                <xmp>
+                                    <div id="dowebok">
+                                        <div class="section">第一屏</div>
+                                        <div class="section">第二屏</div>
+                                        <div class="section">
+                                            <div class="slide">第三屏的第一屏</div>
+                                            <div class="slide">第三屏的第二屏</div>
+                                            <div class="slide">第三屏的第三屏</div>
+                                            <div class="slide">第三屏的第四屏</div>
+                                        </div>
+                                        <div class="section">第四屏</div>
+                                    </div>
+
+                                </xmp>
+                            </pre>
+                            <p>初始化</p>
+                            <pre>
+                                $(function(){
+                                    $('#dowebok').fullpage();
+                             });
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-warning">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        使用方法
+                    </h3>
+                </div>
+                <div class="panel-body">
+                    <div class="panel panel-warning">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                引入资源
+                            </h4>
+                        </div>
+                        <div class="panel-body">
+                            <pre>
+                                <xmp>
+                                    <link rel="stylesheet" href="css/jquery.fullPage.css">
+                                    <script src="js/jquery.min.js"></script>
+                                    <script src=“js/fullpage.js”></script>
+                                </xmp>
+                            </pre>
+                        </div>
+                    </div>
+                    <div class="panel panel-warning">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                配置API
+                            </h4>
+                        </div>
+                        <div class="panel-body">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
