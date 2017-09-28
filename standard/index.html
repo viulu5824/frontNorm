@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <meta name="link ">
     <link rel="stylesheet" href="../asset/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="../asset/swiper/css/swiper.min.css">
     <link rel="stylesheet" href="//at.alicdn.com/t/font_352112_r2nmlu8jd5a8m2t9.css">
@@ -26,7 +27,7 @@
             rootpath: ":/a.com/"
         };
     </script>
-    <script src="../asset/less/less.2.5.3.js"></script>
+    <script src="../asset/less/less.min.js"></script>
     <script>less.watch()</script>
     <!--[if lt IE 9]>
     <script src="../asset/html5shiv/html5shiv.min.js"></script>
@@ -84,7 +85,546 @@
 
 <!--content start-->
 <div class="container clearfix norm-content" id="middle-content">
+    <div class="plugin-API">
+        <div class="panel panel-warning dropdown">
+            <div class="panel-heading">
+                <h2 class="panel-title">
+                    iScroll.js
+                    <span class="fr mydpd-toggle glyphicon glyphicon-chevron-up" data-tog="iScroll-toggle"></span>
+                </h2>
+            </div>
+            <div class="panel-body iScroll-toggle mydpd-target">
+                <div class="panel panel-warning">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            简介
+                        </h3>
+                    </div>
+                    <div class="panel-body">
+                        <ul class="list-group">
+                            <li class="list-group-item disabled">iScroll是一个高性能，资源占用少，无依赖，多平台的javascript滚动插件,拥有滚动，缩放，平移，无限滚动，视差滚动，旋转功能。</li>
+                            <li class="list-group-item h4 ar">功能</li>
+                            <li class="list-group-item ar"> 细粒度控制滚动位置，甚至在滚动过程中。你总是可以获取和设置滚动器的x，y坐标。</li>
+                            <li class="list-group-item ar">动画可以使用用户自定义的擦出功能（反弹'bounce'，弹性'elastic'，回退'back'，...）。</li>
+                            <li class="list-group-item ar">你可以很容易的挂靠大量的自定义事件（onBeforeScrollStart, *</li>
+                            <li class="list-group-item ar">开箱即用的多平台支持。从很老的安卓设备到最新的iPhone，从Chrome浏览器到IE浏览器。</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="panel panel-warning">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            iScroll的版本
+                        </h3>
+                    </div>
+                    <div class="panel-body">
+                        <ul class="list-group">
+                            <li class="list-group-item">iscroll.js，这个版本是常规应用的脚本。它包含大多数常用的功能，有很高的性能和很小的体积。</li>
+                            <li class="list-group-item">	iscroll-lite.js，精简版本。它不支持快速跳跃，滚动条，鼠标滚轮，快捷键绑定。但如果你所需要的是滚动(特别是在移动平台) iScroll 精简版 是又小又快的解决方案。</li>
+                            <li class="list-group-item"> iscroll-probe.js，探查当前滚动位置是一个要求很高的任务,这就是为什么我决定建立一个专门的版本。如果你需要知道滚动位置在任何给定的时间,这是iScroll给你的。</li>
+                            <li class="list-group-item">iscroll-zoom.js，在标准滚动功能上增加缩放功能。</li>
+                            <li class="list-group-item">•	iscroll-infinite.js，可以做无限缓存的滚动。处理很长的列表的元素为移动设备并非易事。 iScroll infinite版本使用缓存机制,允许你滚动一个潜在的无限数量的元素。</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="panel panel-warning">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            初始化
+                        </h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="panel">
+                            当DOM准备完成后iScroll需要被初始化。最保险的方式是在window的onload事件中启动它。
+                            在DOMContentLoaded事件中或者inline initialization中做也可以，需要记住的是脚本需要知道滚动区域的高度和宽度。如果你有一些图片在滚动区域导致不能立马获取区域的高度和宽度，iScroll的滚动尺寸有可能会错误。
+                            为滚动起容器增加position:relative或者absolute样式。这将解决大多数滚动器容器大小计算不正确的问题。
+                            综上所述，最小的iScroll配置如下：
 
+                        </div>
+                        <div class="panel">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <pre>
+                                        <xmp>
+                                            <head>
+                                                ...
+                                                <script type="text/javascript" src="iscroll.js"></script>
+                                                <script type="text/javascript">
+                                                    var myScroll;
+                                                    function loaded() {
+                                                        myScroll = new IScroll(‘#wrapper‘);
+                                                    }
+                                                </script>
+                                            </head>
+                                            ...
+                                            <body onload="loaded()">
+                                            <div id="wrapper">
+                                                <ul>
+                                                    <li>...</li>
+                                                    <li>...</li>
+                                                    ...
+                                                </ul>
+                                            </div>
+                                            </body>
+
+                                        </xmp>
+                                    </pre>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="panel">
+                            <ul class="list-group">
+                                <li class="list-group-item h4 text-success">回调函数</li>
+                                <li class="list-group-item table-responsive">
+                                    <table class="table table-bordered table-striped ac">
+                                        <tr>
+                                            <td>名称</td>
+                                            <td>说明</td>
+                                        </tr>
+                                        <tr>
+                                            <td>afterLoad</td>
+                                            <td>滚动到某一屏后的回调函数，接收 anchorLink 和 index 两个参数，anchorLink 是锚链接的名称，index
+                                                是序号，从1开始计算
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>onLeave
+                                            </td>
+                                            <td>滚动前的回调函数，接收 index、nextIndex 和 direction 3个参数：index 是离开的“页面”的序号，从1开始计算；
+                                                nextIndex 是滚动到的“页面”的序号，从1开始计算；
+                                                direction 判断往上滚动还是往下滚动，值是 up 或 down。
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>afterRender</td>
+                                            <td>页面结构生成后的回调函数，或者说页面初始化完成后的回调函数</td>
+                                        </tr>
+                                        <tr>
+                                            <td>afterSlideLoad</td>
+                                            <td>滚动到某一水平滑块后的回调函数，与 afterLoad 类似，接收 anchorLink、index、slideIndex、direction
+                                                4个参数
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>onSlideLeave</td>
+                                            <td>某一水平滑块滚动前的回调函数，与 onLeave 类似，接收 anchorLink、index、slideIndex、direction
+                                                4个参数
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-warning dropdown">
+            <div class="panel-heading">
+                <h2 class="panel-title">
+                    fullpage.js
+                    <span class="fr mydpd-toggle glyphicon glyphicon-chevron-up" data-tog="fullpage-tog"></span>
+                </h2>
+            </div>
+            <div class="panel-body mydpd-target fullpage-tog">
+                <div class="panel panel-warning">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            简介
+                        </h3>
+                    </div>
+                    <div class="panel-body">
+                        <ul class="list-group">
+                            <li class="list-group-item"> fullPage.js 是一个基于 jQuery 的插件，它能够很方便、很轻松的制作出全屏网站，主要功能有：</li>
+                            <li class="list-group-item ar"> 支持鼠标滚动</li>
+                            <li class="list-group-item ar">支持前进后退和键盘控制</li>
+                            <li class="list-group-item ar">多个回调函数</li>
+                            <li class="list-group-item ar">支持手机、平板触摸事件</li>
+                            <li class="list-group-item ar">支持 CSS3 动画</li>
+                            <li class="list-group-item ar">支持窗口缩放</li>
+                            <li class="list-group-item ar">窗口缩放时自动调整</li>
+                            <li class="list-group-item ar"> 可设置滚动宽度、背景颜色、滚动速度、循环选项、回调、文本对齐方式等等。</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="panel panel-warning">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            使用方法
+                        </h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="panel">
+                            <ul class="list-group">
+                                <li class="list-group-item h4 text-success">引入资源</li>
+                                <li class="list-group-item">
+                                       <pre>
+                                <xmp>
+                                    <link rel="stylesheet" href="css/jquery.fullPage.css">
+                                    <script src="js/jquery.min.js"></script>
+                                    <script src=“js/fullpage.js”></script>
+                                </xmp>
+                            </pre>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="panel">
+                            <ul class="list-group">
+                                <li class="list-group-item h4 text-success">Html模板</li>
+                                <li class="list-group-item">
+                                      <pre>
+                                <xmp>
+                                    <div id="wrapper">
+                                        <div class="section">
+                                            <h3>第一屏</h3>
+                                        </div>
+                                        <div class="section">
+                                            <h3>第二屏</h3>
+                                        </div>
+                                        <div class="section">
+                                            <h3>第三屏</h3>
+                                        </div>
+                                        <div class="section">
+                                            <h3>第四屏</h3>
+                                        </div>
+                                    </div>
+                                </xmp>
+                            </pre>
+                                    <p class="ac">
+                                        每个 section 代表一屏，默认显示“第一屏”，如果要指定加载页面时显示的“屏幕”，可以在对应的 section 加上 class=”active”，如：
+                                    </p>
+                            <pre>
+                                <xmp>
+                                    <div class="section active">第三屏</div>
+                                </xmp>
+                            </pre>
+                                    <p class="ac">同时，可以在 section 内加入 slide，如：</p>
+                            <pre>
+                                <xmp>
+                                    <div id="dowebok">
+                                        <div class="section">第一屏</div>
+                                        <div class="section">第二屏</div>
+                                        <div class="section">
+                                            <div class="slide">第三屏的第一屏</div>
+                                            <div class="slide">第三屏的第二屏</div>
+                                            <div class="slide">第三屏的第三屏</div>
+                                            <div class="slide">第三屏的第四屏</div>
+                                        </div>
+                                        <div class="section">第四屏</div>
+                                    </div>
+
+                                </xmp>
+                            </pre>
+                                    <p class="ac">初始化</p>
+                            <pre>
+                                <xmp>
+                                    $(function(){
+                                    $('#dowebok').fullpage();
+                                    });
+                                </xmp>
+                            </pre>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-warning">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            配置API
+                        </h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="panel">
+                            <ul class="list-group">
+                                <li class="list-group-item h4 text-success">选项</li>
+                                <li class="list-group-item table-responsive">
+                                    <table class="table table-bordered table-striped ac">
+                                        <thead>
+                                        <tr>
+                                            <td>选项</td>
+                                            <td>类型</td>
+                                            <td>默认值</td>
+                                            <td>说明</td>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>verticalCentered</td>
+                                            <td>字符串</td>
+                                            <td>true</td>
+                                            <td>verticalCentered 字符串 true 内容是否垂直居中</td>
+                                        </tr>
+                                        <tr>
+                                            <td>resize</td>
+                                            <td>布尔值</td>
+                                            <td>false</td>
+                                            <td>字体是否随着窗口缩放而缩放</td>
+                                        </tr>
+                                        <tr>
+                                            <td>slidesColor</td>
+                                            <td>函数</td>
+                                            <td>无</td>
+                                            <td>设置背景颜色</td>
+                                        </tr>
+                                        <tr>
+                                            <td>anchors</td>
+                                            <td>数组</td>
+                                            <td>无</td>
+                                            <td>定义锚链接</td>
+                                        </tr>
+                                        <tr>
+                                            <td>scrollingSpeed</td>
+                                            <td>整数</td>
+                                            <td>700</td>
+                                            <td>滚动速度，单位为毫秒</td>
+                                        </tr>
+                                        <tr>
+                                            <td>easing</td>
+                                            <td>字符串</td>
+                                            <td>easeInQuart</td>
+                                            <td>滚动动画方式</td>
+                                        </tr>
+                                        <tr>
+                                            <td>menu</td>
+                                            <td>布尔值</td>
+                                            <td>false</td>
+                                            <td>绑定菜单，设定的相关属性与 anchors 的值对应后，菜单可以控制滚动</td>
+                                        </tr>
+                                        <tr>
+                                            <td>navigation</td>
+                                            <td>布尔值</td>
+                                            <td>false</td>
+                                            <td>是否显示项目导航</td>
+                                        </tr>
+                                        <tr>
+                                            <td>navigationPosition</td>
+                                            <td>字符串</td>
+                                            <td>right</td>
+                                            <td>项目导航的位置，可选 left 或 right</td>
+                                        </tr>
+                                        <tr>
+                                            <td>navigationColor</td>
+                                            <td>字符串</td>
+                                            <td>#000</td>
+                                            <td>项目导航的颜色</td>
+                                        </tr>
+                                        <tr>
+                                            <td>navigationTooltips</td>
+                                            <td>数组</td>
+                                            <td>空</td>
+                                            <td>项目导航的 tip</td>
+                                        </tr>
+                                        <tr>
+                                            <td>slidesNavigation</td>
+                                            <td>布尔值</td>
+                                            <td>false</td>
+                                            <td>是否显示左右滑块的项目导航</td>
+                                        </tr>
+                                        <tr>
+                                            <td>slidesNavPosition</td>
+                                            <td>字符串</td>
+                                            <td>bottom</td>
+                                            <td>左右滑块的项目导航的位置，可选 top 或 bottom</td>
+                                        </tr>
+                                        <tr>
+                                            <td>controlArrowColor</td>
+                                            <td>字符串</td>
+                                            <td>#fff</td>
+                                            <td>左右滑块的箭头的背景颜色</td>
+                                        </tr>
+                                        <tr>
+                                            <td>loopBottom</td>
+                                            <td>布尔值</td>
+                                            <td>false</td>
+                                            <td>滚动到最底部后是否滚回顶部</td>
+                                        </tr>
+                                        <tr>
+                                            <td>loopTop</td>
+                                            <td>布尔值</td>
+                                            <td>false</td>
+                                            <td>滚动到最顶部后是否滚底部</td>
+                                        </tr>
+                                        <tr>
+                                            <td>loopHorizontal</td>
+                                            <td>布尔值</td>
+                                            <td>true</td>
+                                            <td>左右滑块是否循环滑动</td>
+                                        </tr>
+                                        <tr>
+                                            <td>autoScrolling</td>
+                                            <td>布尔值</td>
+                                            <td>true</td>
+                                            <td>是否使用插件的滚动方式，如果选择 false，则会出现浏览器自带的滚动条</td>
+                                        </tr>
+                                        <tr>
+                                            <td>scrollOverflow</td>
+                                            <td>布尔值</td>
+                                            <td>false</td>
+                                            <td>内容超过满屏后是否显示滚动条</td>
+                                        </tr>
+                                        <tr>
+                                            <td>css3</td>
+                                            <td>布尔值</td>
+                                            <td>false</td>
+                                            <td>是否使用 CSS3 transforms 滚动</td>
+                                        </tr>
+                                        <tr>
+                                            <td>paddingTop</td>
+                                            <td>字符串</td>
+                                            <td>0</td>
+                                            <td>与顶部的距离</td>
+                                        </tr>
+                                        <tr>
+                                            <td>paddingBottom</td>
+                                            <td>字符串</td>
+                                            <td>0</td>
+                                            <td>与底部距离</td>
+                                        </tr>
+                                        <tr>
+                                            <td>fixedElements</td>
+                                            <td>字符串</td>
+                                            <td>无</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>normalScrollElements</td>
+                                            <td></td>
+                                            <td>无</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>keyboardScrolling</td>
+                                            <td>布尔值</td>
+                                            <td>true</td>
+                                            <td>是否使用键盘方向键导航</td>
+                                        </tr>
+                                        <tr>
+                                            <td>touchSensitivity</td>
+                                            <td>整数</td>
+                                            <td>5</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>continuousVertical</td>
+                                            <td>布尔值</td>
+                                            <td>false</td>
+                                            <td>是否循环滚动，与 loopTop 及 loopBottom 不兼容</td>
+                                        </tr>
+                                        <tr>
+                                            <td>animateAnchor</td>
+                                            <td>布尔值</td>
+                                            <td>true</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>normalScrollElementTouchThreshold</td>
+                                            <td>整数</td>
+                                            <td>5</td>
+                                            <td></td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="panel">
+                            <ul class="list-group">
+                                <li class="list-group-item h4 text-success">方法</li>
+                                <li class="list-group-item table-responsive">
+                                    <table class="table table-bordered table-striped ac">
+                                        <tr>
+                                            <td>名称</td>
+                                            <td>说明</td>
+                                        </tr>
+                                        <tr>
+                                            <td>moveSectionUp()</td>
+                                            <td>向上滚动</td>
+                                        </tr>
+                                        <tr>
+                                            <td>moveSectionDown()</td>
+                                            <td>向下滚动</td>
+                                        </tr>
+                                        <tr>
+                                            <td>moveTo(section, slide)</td>
+                                            <td>滚动到</td>
+                                        </tr>
+                                        <tr>
+                                            <td>moveSlideRight()</td>
+                                            <td>slide 向右滚动</td>
+                                        </tr>
+                                        <tr>
+                                            <td>moveSlideLeft()</td>
+                                            <td>slide 向左滚动</td>
+                                        </tr>
+                                        <tr>
+                                            <td>setAutoScrolling()</td>
+                                            <td>设置页面滚动方式，设置为 true 时自动滚动</td>
+                                        </tr>
+                                        <tr>
+                                            <td>setAllowScrolling()</td>
+                                            <td>添加或删除鼠标滚轮/触控板控制</td>
+                                        </tr>
+                                        <tr>
+                                            <td>setKeyboardScrolling()</td>
+                                            <td>添加或删除键盘方向键控制</td>
+                                        </tr>
+                                        <tr>
+                                            <td>setScrollingSpeed()</td>
+                                            <td>定义以毫秒为单位的滚动速度</td>
+                                        </tr>
+                                    </table>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="panel">
+                            <ul class="list-group">
+                                <li class="list-group-item h4 text-success">回调函数</li>
+                                <li class="list-group-item table-responsive">
+                                    <table class="table table-bordered table-striped ac">
+                                        <tr>
+                                            <td>名称</td>
+                                            <td>说明</td>
+                                        </tr>
+                                        <tr>
+                                            <td>afterLoad</td>
+                                            <td>滚动到某一屏后的回调函数，接收 anchorLink 和 index 两个参数，anchorLink 是锚链接的名称，index
+                                                是序号，从1开始计算
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>onLeave
+                                            </td>
+                                            <td>滚动前的回调函数，接收 index、nextIndex 和 direction 3个参数：index 是离开的“页面”的序号，从1开始计算；
+                                                nextIndex 是滚动到的“页面”的序号，从1开始计算；
+                                                direction 判断往上滚动还是往下滚动，值是 up 或 down。
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>afterRender</td>
+                                            <td>页面结构生成后的回调函数，或者说页面初始化完成后的回调函数</td>
+                                        </tr>
+                                        <tr>
+                                            <td>afterSlideLoad</td>
+                                            <td>滚动到某一水平滑块后的回调函数，与 afterLoad 类似，接收 anchorLink、index、slideIndex、direction
+                                                4个参数
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>onSlideLeave</td>
+                                            <td>某一水平滑块滚动前的回调函数，与 onLeave 类似，接收 anchorLink、index、slideIndex、direction
+                                                4个参数
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 <!--content end-->
 <script data-main="main" src="../asset/require/require.js"></script>

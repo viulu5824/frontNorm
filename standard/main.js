@@ -1,7 +1,11 @@
+/**
+ * Created by V_LIU on 2017/9/5.
+ */
 requirejs.config({
     baseUrl:"../asset",
     paths:{
         "jquery":"./jquery/jquery-1.9.1.min",
+        "jqueryEasing":"./jquery/jquery.easing.min",
         "swiper":"./swiper/js/swiper.jquery.min",
         "bootstrap":"./bootstrap/js/bootstrap.min",
         "text":"./require/text",
@@ -11,12 +15,12 @@ requirejs.config({
     shim:{
         bootstrap:{
             deps:["jquery"]
+        },
+        jqueryEasing:{
+            deps:["jquery"]
         }
     }
-})
-;
-require(["js/core.js"],function(){
-    console.log(
-        "我是main.js"
-    )
-})
+});
+require(["js/index.js"],function(){
+
+});

@@ -229,7 +229,7 @@
             nextSlideMessage: 'Next slide',
             firstSlideMessage: 'This is the first slide',
             lastSlideMessage: 'This is the last slide',
-            paginationBulletMessage: 'Go to slide {{index}}',
+            paginationBulletMessage: 'Go to slide {{common.js}}',
             // Callbacks
             runCallbacksOnInit: true
             /*
@@ -1058,7 +1058,7 @@
             s.updateRealIndex();
         };
         s.updateRealIndex = function(){
-            s.realIndex = parseInt(s.slides.eq(s.activeIndex).attr('data-swiper-slide-index') || s.activeIndex, 10);
+            s.realIndex = parseInt(s.slides.eq(s.activeIndex).attr('data-swiper-slide-common.js') || s.activeIndex, 10);
         };
         
         /*=========================
@@ -1072,10 +1072,10 @@
             if (params.loop) {
                 // Duplicate to all looped slides
                 if (activeSlide.hasClass(s.params.slideDuplicateClass)) {
-                    s.wrapper.children('.' + s.params.slideClass + ':not(.' + s.params.slideDuplicateClass + ')[data-swiper-slide-index="' + s.realIndex + '"]').addClass(s.params.slideDuplicateActiveClass);
+                    s.wrapper.children('.' + s.params.slideClass + ':not(.' + s.params.slideDuplicateClass + ')[data-swiper-slide-common.js="' + s.realIndex + '"]').addClass(s.params.slideDuplicateActiveClass);
                 }
                 else {
-                    s.wrapper.children('.' + s.params.slideClass + '.' + s.params.slideDuplicateClass + '[data-swiper-slide-index="' + s.realIndex + '"]').addClass(s.params.slideDuplicateActiveClass);
+                    s.wrapper.children('.' + s.params.slideClass + '.' + s.params.slideDuplicateClass + '[data-swiper-slide-common.js="' + s.realIndex + '"]').addClass(s.params.slideDuplicateActiveClass);
                 }
             }
             // Next Slide
@@ -1093,16 +1093,16 @@
             if (params.loop) {
                 // Duplicate to all looped slides
                 if (nextSlide.hasClass(s.params.slideDuplicateClass)) {
-                    s.wrapper.children('.' + s.params.slideClass + ':not(.' + s.params.slideDuplicateClass + ')[data-swiper-slide-index="' + nextSlide.attr('data-swiper-slide-index') + '"]').addClass(s.params.slideDuplicateNextClass);
+                    s.wrapper.children('.' + s.params.slideClass + ':not(.' + s.params.slideDuplicateClass + ')[data-swiper-slide-common.js="' + nextSlide.attr('data-swiper-slide-common.js') + '"]').addClass(s.params.slideDuplicateNextClass);
                 }
                 else {
-                    s.wrapper.children('.' + s.params.slideClass + '.' + s.params.slideDuplicateClass + '[data-swiper-slide-index="' + nextSlide.attr('data-swiper-slide-index') + '"]').addClass(s.params.slideDuplicateNextClass);
+                    s.wrapper.children('.' + s.params.slideClass + '.' + s.params.slideDuplicateClass + '[data-swiper-slide-common.js="' + nextSlide.attr('data-swiper-slide-common.js') + '"]').addClass(s.params.slideDuplicateNextClass);
                 }
                 if (prevSlide.hasClass(s.params.slideDuplicateClass)) {
-                    s.wrapper.children('.' + s.params.slideClass + ':not(.' + s.params.slideDuplicateClass + ')[data-swiper-slide-index="' + prevSlide.attr('data-swiper-slide-index') + '"]').addClass(s.params.slideDuplicatePrevClass);
+                    s.wrapper.children('.' + s.params.slideClass + ':not(.' + s.params.slideDuplicateClass + ')[data-swiper-slide-common.js="' + prevSlide.attr('data-swiper-slide-common.js') + '"]').addClass(s.params.slideDuplicatePrevClass);
                 }
                 else {
-                    s.wrapper.children('.' + s.params.slideClass + '.' + s.params.slideDuplicateClass + '[data-swiper-slide-index="' + prevSlide.attr('data-swiper-slide-index') + '"]').addClass(s.params.slideDuplicatePrevClass);
+                    s.wrapper.children('.' + s.params.slideClass + '.' + s.params.slideDuplicateClass + '[data-swiper-slide-common.js="' + prevSlide.attr('data-swiper-slide-common.js') + '"]').addClass(s.params.slideDuplicatePrevClass);
                 }
             }
         
@@ -1489,11 +1489,11 @@
                     slidesPerView = s.params.slidesPerView === 'auto' ? s.currentSlidesPerView() : s.params.slidesPerView;
                 if (s.params.loop) {
                     if (s.animating) return;
-                    realIndex = parseInt($(s.clickedSlide).attr('data-swiper-slide-index'), 10);
+                    realIndex = parseInt($(s.clickedSlide).attr('data-swiper-slide-common.js'), 10);
                     if (s.params.centeredSlides) {
                         if ((slideToIndex < s.loopedSlides - slidesPerView/2) || (slideToIndex > s.slides.length - s.loopedSlides + slidesPerView/2)) {
                             s.fixLoop();
-                            slideToIndex = s.wrapper.children('.' + s.params.slideClass + '[data-swiper-slide-index="' + realIndex + '"]:not(.' + s.params.slideDuplicateClass + ')').eq(0).index();
+                            slideToIndex = s.wrapper.children('.' + s.params.slideClass + '[data-swiper-slide-common.js="' + realIndex + '"]:not(.' + s.params.slideDuplicateClass + ')').eq(0).index();
                             setTimeout(function () {
                                 s.slideTo(slideToIndex);
                             }, 0);
@@ -1505,7 +1505,7 @@
                     else {
                         if (slideToIndex > s.slides.length - slidesPerView) {
                             s.fixLoop();
-                            slideToIndex = s.wrapper.children('.' + s.params.slideClass + '[data-swiper-slide-index="' + realIndex + '"]:not(.' + s.params.slideDuplicateClass + ')').eq(0).index();
+                            slideToIndex = s.wrapper.children('.' + s.params.slideClass + '[data-swiper-slide-common.js="' + realIndex + '"]:not(.' + s.params.slideDuplicateClass + ')').eq(0).index();
                             setTimeout(function () {
                                 s.slideTo(slideToIndex);
                             }, 0);
@@ -1757,7 +1757,7 @@
         
             if (!s.params.followFinger) return;
         
-            // Update active index in free mode
+            // Update active common.js in free mode
             if (s.params.freeMode || s.params.watchSlidesProgress) {
                 s.updateActiveIndex();
             }
@@ -2391,7 +2391,7 @@
                 var slide = $(this);
                 if (index < s.loopedSlides) appendSlides.push(el);
                 if (index < slides.length && index >= slides.length - s.loopedSlides) prependSlides.push(el);
-                slide.attr('data-swiper-slide-index', index);
+                slide.attr('data-swiper-slide-common.js', index);
             });
             for (i = 0; i < appendSlides.length; i++) {
                 s.wrapper.append($(appendSlides[i].cloneNode(true)).addClass(s.params.slideDuplicateClass));
@@ -2402,7 +2402,7 @@
         };
         s.destroyLoop = function () {
             s.wrapper.children('.' + s.params.slideClass + '.' + s.params.slideDuplicateClass).remove();
-            s.slides.removeAttr('data-swiper-slide-index');
+            s.slides.removeAttr('data-swiper-slide-common.js');
         };
         s.reLoop = function (updatePosition) {
             var oldIndex = s.activeIndex - s.loopedSlides;
@@ -2846,13 +2846,13 @@
                         _img.addClass(s.params.lazyStatusLoadedClass).removeClass(s.params.lazyStatusLoadingClass);
                         slide.find('.' + s.params.lazyPreloaderClass + ', .' + s.params.preloaderClass).remove();
                         if (s.params.loop && loadInDuplicate) {
-                            var slideOriginalIndex = slide.attr('data-swiper-slide-index');
+                            var slideOriginalIndex = slide.attr('data-swiper-slide-common.js');
                             if (slide.hasClass(s.params.slideDuplicateClass)) {
-                                var originalSlide = s.wrapper.children('[data-swiper-slide-index="' + slideOriginalIndex + '"]:not(.' + s.params.slideDuplicateClass + ')');
+                                var originalSlide = s.wrapper.children('[data-swiper-slide-common.js="' + slideOriginalIndex + '"]:not(.' + s.params.slideDuplicateClass + ')');
                                 s.lazy.loadImageInSlide(originalSlide.index(), false);
                             }
                             else {
-                                var duplicatedSlide = s.wrapper.children('.' + s.params.slideDuplicateClass + '[data-swiper-slide-index="' + slideOriginalIndex + '"]');
+                                var duplicatedSlide = s.wrapper.children('.' + s.params.slideDuplicateClass + '[data-swiper-slide-common.js="' + slideOriginalIndex + '"]');
                                 s.lazy.loadImageInSlide(duplicatedSlide.index(), false);
                             }
                         }

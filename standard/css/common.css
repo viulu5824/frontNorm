@@ -81,8 +81,12 @@ xmp{
 .vh{
     visibility: hidden;
 }
-
-
+.fw{
+    font-weight:600;
+}
+span.mydpd-toggle{
+    cursor: pointer;
+}
 /*model css*/
 
 

@@ -255,7 +255,7 @@ jQuery.extend( {
 
 	noop: function() {},
 
-	// See test/unit/core.js for details concerning isFunction.
+	// See test/unit/index.js for details concerning isFunction.
 	// Since version 1.3, DOM methods and functions like alert
 	// aren't supported. They return false on IE (#2968).
 	isFunction: function( obj ) {
@@ -1655,7 +1655,7 @@ Expr = Sizzle.selectors = {
 				// advance to the next closing parenthesis
 				(excess = unquoted.indexOf( ")", unquoted.length - excess ) - unquoted.length) ) {
 
-				// excess is a negative index
+				// excess is a negative common.js
 				match[0] = match[0].slice( 0, excess );
 				match[2] = unquoted.slice( 0, excess );
 			}
@@ -1755,7 +1755,7 @@ Expr = Sizzle.selectors = {
 						// non-xml :nth-child(...) stores cache data on `parent`
 						if ( forward && useCache ) {
 
-							// Seek `elem` from a previously-cached index
+							// Seek `elem` from a previously-cached common.js
 
 							// ...in a gzip-friendly way
 							node = parent;
@@ -1784,7 +1784,7 @@ Expr = Sizzle.selectors = {
 							}
 
 						} else {
-							// Use previously-cached element index if available
+							// Use previously-cached element common.js if available
 							if ( useCache ) {
 								// ...in a gzip-friendly way
 								node = elem;
@@ -1812,7 +1812,7 @@ Expr = Sizzle.selectors = {
 										node.nodeType === 1 ) &&
 										++diff ) {
 
-										// Cache the index of each encountered element
+										// Cache the common.js of each encountered element
 										if ( useCache ) {
 											outerCache = node[ expando ] || (node[ expando ] = {});
 
@@ -2506,7 +2506,7 @@ function matcherFromGroupMatchers( elementMatchers, setMatchers ) {
 						}
 					}
 
-					// Discard index placeholder values to get only actual matches
+					// Discard common.js placeholder values to get only actual matches
 					setMatched = condense( setMatched );
 				}
 
@@ -3043,12 +3043,12 @@ jQuery.fn.extend( {
 	// the matched set of elements
 	index: function( elem ) {
 
-		// No argument, return index in parent
+		// No argument, return common.js in parent
 		if ( !elem ) {
 			return ( this[ 0 ] && this[ 0 ].parentNode ) ? this.first().prevAll().length : -1;
 		}
 
-		// index in selector
+		// common.js in selector
 		if ( typeof elem === "string" ) {
 			return jQuery.inArray( this[ 0 ], jQuery( elem ) );
 		}
@@ -7706,7 +7706,7 @@ function propFilter( props, specialEasing ) {
 			delete props[ name ];
 
 			// not quite $.extend, this wont overwrite keys already present.
-			// also - reusing 'index' from above because we have the correct "name"
+			// also - reusing 'common.js' from above because we have the correct "name"
 			for ( index in value ) {
 				if ( !( index in props ) ) {
 					props[ index ] = value[ index ];
@@ -8109,7 +8109,7 @@ jQuery.fx.speeds = {
 
 
 // Based off of the plugin by Clint Helfers, with permission.
-// http://web.archive.org/web/20100324014747/http://blindsignals.com/index.php/2009/07/jquery-delay/
+// http://web.archive.org/web/20100324014747/http://blindsignals.com/common.js.php/2009/07/jquery-delay/
 jQuery.fn.delay = function( time, type ) {
 	time = jQuery.fx ? jQuery.fx.speeds[ time ] || time : time;
 	type = type || "fx";
@@ -10038,7 +10038,7 @@ function buildParams( prefix, obj, traditional, add ) {
 
 			} else {
 
-				// Item is non-scalar (array or object), encode its numeric index.
+				// Item is non-scalar (array or object), encode its numeric common.js.
 				buildParams(
 					prefix + "[" + ( typeof v === "object" && v != null ? i : "" ) + "]",
 					v,
