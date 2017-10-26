@@ -1,4 +1,4 @@
-<div class="htmlCssJs">
+<section class="htmlCssJs">
     <aside class="float-sidebar">
         <ul class="list-group">
             <li class="list-group-item-warning active">项目目录规范</li>
@@ -9,63 +9,603 @@
     </aside>
     <div class="panel panel-warning">
         <div class="panel-heading">
-            <h3 class="panel-title">Html规范</h3>
+            <h3 class="panel-title">
+                Html规范
+                <span class="fr mydpd-toggle glyphicon glyphicon-chevron-down" data-tog="normHTML-toggle"></span>
+            </h3>
         </div>
-        <div class="panel-body">
-            <div class="panel panel-warning">
+        <div class="panel-body normHTML-toggle mydpd-target hd">
+            <div class="panel-warning">
                 <div class="panel-heading">
-                    <h3 class="panel-title">响应式Html基本模板</h3>
+                    <h4 class="panel-title">响应式Html基本模板</h4>
                 </div>
                 <div class="panel-body">
                    <pre class="respond-codeModal">
                         <xmp>
-                            <!--html5文档申明-->
-                            <!DOCTYPE html>
-                            <!--使用中文简体语言申明-->
-                            <html lang="zh-CN">
-                            <head>
-                                <!--字符编码-->
-                                <meta charset="utf-8">
-                                <!--指明当前IE浏览器按最新的渲染引擎来渲染页面-->
-                                <meta http-equiv="X-UA-Compatible" content="IE=edge">
-                                <!--视口：视口的宽度和设备一致 缩放比默认是1.0 不运行用户自行缩放-->
-                                <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
-                                <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-                                <!-- 页面的解析顺序从上到小  优先告诉浏览器用最新的引擎来渲染并且这个一个移动端页面 -->
-                                <title>template</title>
-                                <!-- 引入bootstrap的核心样式库 -->
-                                <link href="../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-                                <!--html5标签和媒体查询在IE8一下浏览存在兼容问题，但是通过 html5shiv respond 俩解决-->
-                                <!--注意：不能以本地形式打开 可以http形式  webstorm 形式打开-->
-                                <!--html5shiv H5标签兼容-->
-                                <!--respond  媒体查询兼容-->
+ <!--html5文档申明-->
+ <!DOCTYPE html>
+ <!--使用中文简体语言申明-->
+ <html lang="zh-CN">
+ <head>
+     <!--字符编码-->
+     <meta charset="utf-8">
+     <!--指明当前IE浏览器按最新的渲染引擎来渲染页面-->
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <!--视口：视口的宽度和设备一致 缩放比默认是1.0 不运行用户自行缩放-->
+     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+     <!-- 页面的解析顺序从上到小  优先告诉浏览器用最新的引擎来渲染并且这个一个移动端页面 -->
+     <title>template</title>
+     <!-- 引入bootstrap的核心样式库 -->
+     <link href="../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+     <!--html5标签和媒体查询在IE8一下浏览存在兼容问题，但是通过 html5shiv respond 俩解决-->
+     <!--注意：不能以本地形式打开 可以http形式  webstorm 形式打开-->
+     <!--html5shiv H5标签兼容-->
+     <!--respond  媒体查询兼容-->
 
-                                <!--条件注释  在IE9一下生效-->
-                                <!--[if lt IE 9]>
-                                <script src="../lib/html5shiv/html5shiv.min.js"></script>
-                                <script src="../lib/respond/respond.min.js"></script>
-                                <![endif]-->
-                            </head>
-                            <body>
-                            Hello World!
-                            <!-- jQuery 是bootstrap需要依赖的库-->
-                            <script src="../lib/jquery/jquery.min.js"></script>
-                            <!-- 引入bootstrap核心js文件-->
-                            <script src="../lib/bootstrap/js/bootstrap.min.js"></script>
-                            </body>
-                            </html>
+     <!--条件注释  在IE9一下生效-->
+     <!--[if lt IE 9]>
+     <script src="../lib/html5shiv/html5shiv.min.js"></script>
+     <script src="../lib/respond/respond.min.js"></script>
+     <![endif]-->
+ </head>
+ <body>
+ Hello World!
+ <!-- jQuery 是bootstrap需要依赖的库-->
+ <script src="../lib/jquery/jquery.min.js"></script>
+ <!-- 引入bootstrap核心js文件-->
+ <script src="../lib/bootstrap/js/bootstrap.min.js"></script>
+ </body>
+ </html>
                         </xmp>
                    </pre>
+                </div>
+            </div>
+            <div class="panel-warning">
+                <div class="panel-heading">
+                    <h4 class="panel-title">书写规范</h4>
+                </div>
+                <div class="panel-body">
+                    <div class="panel">
+                        <ul class="list-group text-info">
+                            <li class="list-group-item h4 text-success">
+                                HTML书写基本规范
+                            </li>
+                            <li class="list-group-item">
+                                <ul class="list-group">
+                                    <li class="list-group-item">
+                                        <span class="caret"></span>
+                                        HTML文件中只写HTML，JS、CSS尽量外引，不要写在当前页面中 ====>【样式、结构、行为三者分离，更符合W3C规范！】
+                                    </li>
+                                    <li class="list-group-item">
+                                        <span class="caret"></span>
+                                        将link标签放在head标签的最后,并应用好CSS的层叠性。
+                                    </li>
+                                    <li class="list-group-item">
+                                        <span class="caret"></span>
+                                        将script标签放置body结束标签之前,在不写window.onload/$(document).ready(function(){})的情况下能更好的执行JS
+                                    </li>
+                                    <li class="list-group-item">
+                                        <span class="caret"></span>
+                                        HTML标签书写要符合W3C规范的嵌套规则
+                                        <img src="img/HTML嵌套规则.jpg" class="img-responsive" alt=""/>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <span class="caret"></span>
+                                        尽量使用HTML5语义化标签，摒弃HTML删除的标签
+                                        <pre>
+                                            <xmp>
+    结构标签：(块状元素) 有意义的div
+
+<article>    标记定义一篇文章
+<header>     标记定义一个页面或一个区域的头部
+<nav>        标记定义导航链接
+<section>    标记定义一个区域
+<aside>      标记定义页面内容部分的侧边栏
+<hgroup>     标记定义文件中一个区块的相关信息
+<figure>     标记定义一组媒体内容以及它们的标题
+<figcaption> 标签定义 figure 元素的标题。
+<footer>     标记定义一个页面或一个区域的底部
+<dialog>     标记定义一个对话框(会话框)类似微信
+
+
+
+    多媒体交互标签
+
+<video>  标记定义一个视频
+<audio>  标记定义音频内容
+<source> 标记定义媒体资源
+<canvas> 标记定义图片
+<embed>  标记定义外部的可交互的内容或插件 比如flash
+
+
+
+    Web应用标签
+
+<menu>命令列表
+<menuitem>menu命令列表标签 FF（嵌入系统）
+<command> menu标记定义一个命令按钮
+<meter>状态标签(实时状态显示:气压、气温)C、O
+<progress>状态标签 (任务过程:安装、加载) C、F、O
+<datalist> 为input标记定义一个下拉列表,配合option F、O
+<details> 标记定义一个元素的详细内容 ，配合dt、dd   C
+
+
+
+    注释标签
+
+<ruby> 标记定义 注释或音标
+<rp> 告诉那些不支持 Ruby元素的浏览器如何去显示
+<rt> 标记定义对ruby的注释内容文本
+
+
+
+    其他标签
+
+<keygen> 标记定义表单里一个生成的键值(加密信息传送)O、F
+<mark> 标记定义有标记的文本 (黄色选中状态)
+<output> 标记定义一些输出类型,计算表单结果配合oninput
+
+
+
+    删除的HTML标签
+
+纯表现的元素：
+basefont，big，center，font, s，strike，tt，u；
+对可用性产生负面影响的元素：
+frame，frameset，noframes；
+产生混淆的元素：
+acronym ，applet，isindex，dir
+
+
+
+重新定义的HTML标签
+
+<b>  代表内联文本，通常是粗体，没有传递表示重要的意思
+<i>  代表内联文本，通常是斜体，没有传递表示重要的意思
+<dd> 可以同details与figure一同使用，定义包含文本，dialog也可用
+<dt> 可以同details与figure一同使用，汇总细节，dialog也可用
+<hr> 表示主题结束，而不是水平线，虽然显示相同
+<menu> 重新定义用户界面的菜单，配合commond或者menuitem使用
+<small> 表示小字体，例如打印注释或者法律条款
+                                        </xmp>
+                                        </pre>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul class="list-group text-info">
+                            <li class="list-group-item h4 text-success">
+                                meta标签的使用
+                            </li>
+                            <li class="list-group-item">
+                                <span class="caret"></span>
+                                meta标签的作用：
+                                <p>
+                                    搜索引擎优化（SEO），定义页面使用语言，自动刷新并指向新的页面，实现网页转换时的动态效果，控制页面缓冲，网页定级评价，控制网页显示的窗口等！
+                                </p>
+                                <span class="caret"></span>
+                                meta标签的组成：
+                                <p>
+                                    meta标签主要有两个属性，它们分别是http-equiv属性和name属性，不同的属性又有不同的参数值，这些不同的参数值就实现了不同的网页功能。
+                                    <ul class="list-group">
+                                        <li class="list-group-item text-info">
+                                            <span class="caret"></span>
+                                            一、 name属性：
+                                           <div>
+                                               　name属性主要用于描述网页，与之对应的属性值为content，content中的内容主要是便于搜索引擎机器人查找信息和分类信息用的。
+                                               <ul class="list-group">
+                                                   <li class="list-group-item text-info">
+                                                       meta标签的name属性语法格式：
+                                                    <pre>
+<xmp>
+    <meta name="参数"content="具体的参数值">。
+
+    A、Keywords(关键字)　
+    说明：keywords用来告诉搜索引擎你网页的关键字是什么。
+
+    举例：
+    <meta name="keywords"content="meta总结,html meta,meta属性,meta跳转">
+
+    B、description(网站内容描述)
+    说明：description用来告诉搜索引擎你的网站主要内容。
+
+    举例：
+    <meta name="description"content="薪火网研-国内领先互联网教育服务平台。">
+
+
+
+    ===>> 以下较少使用!!!
+
+    C、robots(机器人向导)
+
+    说明：robots用来告诉搜索机器人哪些页面需要索引，哪些页面不需要索引。
+    content的参数有all,none,index,noindex,follow,nofollow。默认是all。
+
+    举例：
+    <meta name="robots"content="none">
+
+    具体参数如下：
+
+    　　信息参数为all：文件将被检索，且页面上的链接可以被查询；
+
+    　　信息参数为none：文件将不被检索，且页面上的链接不可以被查询；
+
+    　　信息参数为index：文件将被检索；
+
+    　　信息参数为follow：页面上的链接可以被查询；
+
+    　　信息参数为noindex：文件将不被检索，但页面上的链接可以被查询；
+
+    　　信息参数为nofollow：文件将被检索，但页面上的链接不可以被查询；
+</xmp>
+                                                    </pre>
+                                                   </li>
+                                               </ul>
+                                           </div>
+                                        </li>
+                                    </ul>
+                                    <ul class="list-group">
+                                        <li class="list-group-item text-info">
+                                            <span class="caret"></span>
+                                            二、 http-equiv属性：
+                                            <div>
+                                                　　http-equiv顾名思义，相当于http的文件头作用，它可以向浏览器传回一些有用的信息，以帮助正确和精确地显示网页内容，与之对应的属性值为content，content中的内容其实就是各个参数的变量值。
+                                                <ul class="list-group">
+                                                    <li class="list-group-item text-info">
+                                                        meta标签的name属性语法格式：
+                                                    <pre>
+<xmp>
+    <meta http-equiv="参数"content="参数变量值">；
+</xmp>
+                                                    </pre>
+                                                    </li>
+                                                    <li class="list-group-item text-info">
+                                                        http-equiv属性主要有以下几种参数：
+                                                    <pre>
+<xmp>
+    A、Pragma(cache模式)
+
+    说明：禁止浏览器从本地计算机的缓存中访问页面内容。
+
+    用法：
+    <meta http-equiv="Pragma"content="no-cache">
+
+    B、Refresh(刷新)
+
+    说明：自动刷新并指向新页面。
+
+    用法：
+    //(注意后面的引号，分别在秒数的前面和网址的后面)
+    <meta http-equiv="Refresh"content="2;URL=http://www.haorooms.com">
+</xmp>
+                                                    </pre>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <ul class="list-group">
+                                        <li class="list-group-item text-info">
+                                            <span class="caret"></span>
+                                            其他常用meta标签（移动端）
+                                            <div>
+                                                <pre><xmp>
+<!-- 声明文档使用的字符编码 -->
+<meta charset='utf-8'>
+<!-- 优先使用 IE 最新版本和 Chrome -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<meta name="wap-font-scale" content="no">
+
+<!-- 为移动设备添加 viewport -->
+<meta name="viewport" content="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">
+
+<!-- iOS 设备 begin -->
+<meta name="apple-mobile-web-app-title" content="标题">
+<!-- 添加到主屏后的标题（iOS 6 新增） -->
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<!-- 是否启用 WebApp 全屏模式，删除苹果默认的工具栏和菜单栏 -->
+
+<meta name="apple-itunes-app" content="app-id=myAppStoreID, affiliate-data=myAffiliateData, app-argument=myURL">
+<!-- 添加智能 App 广告条 Smart App Banner（iOS 6+ Safari） -->
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<!-- 设置苹果工具栏颜色 -->
+<meta name="format-detection" content="telphone=no, email=no"/>
+<!-- 忽略页面中的数字识别为电话，忽略email识别 -->
+<!-- 启用360浏览器的极速模式(webkit) -->
+<meta name="renderer" content="webkit">
+<!-- 避免IE使用兼容模式 -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- 不让百度转码 -->
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+<meta name="HandheldFriendly" content="true">
+<!-- 微软的老式浏览器 -->
+<meta name="MobileOptimized" content="320">
+<!-- uc强制竖屏 -->
+<meta name="screen-orientation" content="portrait">
+<!-- QQ强制竖屏 -->
+<meta name="x5-orientation" content="portrait">
+<!-- UC强制全屏 -->
+<meta name="full-screen" content="yes">
+<!-- QQ强制全屏 -->
+<meta name="x5-fullscreen" content="true">
+<!-- UC应用模式 -->
+<meta name="browsermode" content="application">
+<!-- QQ应用模式 -->
+<meta name="x5-page-mode" content="app">
+<!-- windows phone 点击无高光 -->
+<meta name="msapplication-tap-highlight" content="no">
+                                                </xmp></pre>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     <div class="panel panel-warning">
         <div class="panel-heading">
-            <h3 class="panel-title">Panel title</h3>
+            <h3 class="panel-title">
+                CSS规范
+                <span class="fr mydpd-toggle glyphicon glyphicon-chevron-down" data-tog="normCSS-toggle"></span>
+            </h3>
         </div>
-        <div class="panel-body">
-            Panel content
+        <div class="panel-body normCSS-toggle mydpd-target hd">
+            <div class="panel-warning">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        书写规范
+                    </h4>
+                </div>
+                <div class="panel-body">
+                    <div class="panel">
+                        <ul class="list-group text-danger">
+                            <li class="list-group-item h4 text-success">
+                                类名的命名规范
+                            </li>
+                            <li class="list-group-item">
+                                    <span class="caret"></span>
+                                        类名命名的基本原则：
+                                    <ul class="list-group">
+                                <li class="list-group-item">语义化           ====> 和类名当前所属盒子的功能、作用、特点相吻合</li>
+                                <li class="list-group-item"> 规范化           ====> 尽量用英文或英文缩写，禁止随意性命名类名（易造成样式冲突或样式混乱）</li>
+                                <li class="list-group-item">                                        凸出当前项目      ====> body下所属的各个区块的类名应带有当前项目前缀
+                                </li>
+                            </ul>
+                                    <span class="caret"></span>
+                                    项目类命名规范：
+                                    <ul class="list-group text-danger">
+                                        <li class="list-group-item">1. 首先定项目前缀，例如薪火网研-->前缀为“xhwy-”,并且项目前缀只适用在body的直接子元素区块</li>
+                                        <li class="list-group-item">2. 常用的class名
+                                            <pre><xmp>
+头：header                           内容：content/container         尾：footer
+侧栏：sidebar                        栏目：column                    导航：nav
+页面外围控制整体布局宽度：wrapper      标志：logo                      菜单：menu
+广告：banner                         页面主体：main                   热点：hot
+新闻：news                           下载：download                  子导航：subnav
+子菜单：submenu                      搜索：search                    友情链接：friendlink
+页脚：footer                         版权：copyright                 滚动：scroll
+内容：content                        标签页：tab                     文章列表：list
+提示信息：msg                        小技巧：tips                     栏目标题：title
+加入：joinus                         指南：guide                     服务：service
+注册：register                       状态：status                    投票：vote
+合作伙伴：partner                    导航：nav                       主导航：mainnav
+子导航：subnav                       顶导航：topnav                  边导航：sidebar
+菜单：menu                           子菜单：submenu                 标题: title
+摘要: summary                        标志：logo                      广告：banner
+登陆：login                          登录条：loginbar                注册：register
+搜索：search                         加入：joinus                    状态：status
+按钮：btn                            滚动：scroll                    标签页：tab
+文章列表：list                       提示信息：msg                    当前的: current
+小技巧：tips                         图标: icon                      注释：note
+指南：guide                          服务：service                   热点：hot
+新闻：news                           下载：download                  版权：copyright
+                                            </xmp></pre>
+                                        </li>
+                                    </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="panel">
+                        <ul class="list-group text-danger">
+                            <li class="list-group-item h4 text-success">
+                                CSS权重和层叠性
+                            </li>
+                            <li class="list-group-item">
+                                <p>
+                                    <span class="caret"></span>
+                                        类名命名的基本原则：
+                                    <ul class="list-group">
+                                <li class="list-group-item">语义化           ====> 和类名当前所属盒子的功能、作用、特点相吻合</li>
+                                <li class="list-group-item"> 规范化           ====> 尽量用英文或英文缩写，禁止随意性命名类名（易造成样式冲突或样式混乱）</li>
+                                <li class="list-group-item">                                        凸出当前项目      ====> body下所属的各个区块的类名应带有当前项目前缀
+                                </li>
+                            </ul>
+                                    <span class="caret"></span>
+                                    项目类命名规范：
+                                    <ul class="list-group text-danger">
+                                        <li class="list-group-item">1. 首先定项目前缀，例如薪火网研-->前缀为“xhwy-”,并且项目前缀只适用在body的直接子元素区块</li>
+                                        <li class="list-group-item">2. 常用的class名
+                                            <pre><xmp>
+头：header                              内容：content/container                             尾：footer
+侧栏：sidebar                           栏目：column                                        导航：nav
+页面外围控制整体布局宽度：wrapper         标志：logo                                          菜单：menu
+广告：banner                            页面主体：main                                       热点：hot
+新闻：news                              下载：download                                      子导航：subnav
+子菜单：submenu                         搜索：search                                        友情链接：friendlink
+页脚：footer                            版权：copyright                                     滚动：scroll
+内容：content                           标签页：tab                                         文章列表：list
+提示信息：msg                           小技巧：tips                                         栏目标题：title
+加入：joinus                            指南：guide                                         服务：service
+注册：register                          状态：status                                        投票：vote
+合作伙伴：partner                       导航：nav                                           主导航：mainnav
+子导航：subnav                          顶导航：topnav                                      边导航：sidebar
+菜单：menu                              子菜单：submenu                                     标题: title
+摘要: summary                           标志：logo                                          广告：banner
+登陆：login                             登录条：loginbar                                    注册：register
+搜索：search                            加入：joinus                                        状态：status
+按钮：btn                               滚动：scroll                                        标签页：tab
+文章列表：list                          提示信息：msg                                        当前的: current
+小技巧：tips                            图标: icon                                          注释：note
+指南：guide                             服务：service                                       热点：hot
+新闻：news                              下载：download                                      版权：copyright
+                                            </xmp></pre>
+                                        </li>
+                                    </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-warning">
+                <div class="panel-heading"></div>
+                <div class="panel-body"></div>
+            </div>
         </div>
     </div>
-</div>
+    <div class="panel panel-warning">
+        <div class="panel-heading">
+            <h3 class="panel-title">
+                JS/JQ规范
+                <span class="fr mydpd-toggle glyphicon glyphicon-chevron-down" data-tog="js-toggle"></span>
+            </h3>
+        </div>
+        <div class="panel-body js-toggle mydpd-target hd">
+           <div class="panel-warning">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        JS规范
+                    </h4>
+                </div>
+               <div class="panel-body">
+                     <div class="panel">
+                         <ul class="list-group text-info">
+                             <li class="list-group-item text-success h4">入口函数</li>
+                             <li class="list-group">
+                                 <p>
+                                     <span class="caret"></span>
+                                     除一些因依赖关系需要和依赖文件放在一起的JS脚本(例如less.js=>用于编译less文件)，所有JS脚本（包括外引）应当写在 &lt;/body> 之前;
+                                     <br/>（!!!操作DOM的JS文件，必须放在&lt;/body>之前；） ===>这样写可以避免页面加载初的页面空白
+                                 </p>
+                                 <p>
+                                     <span class="caret"></span>
+                                    入口函数：window.onload=function(){};所有写在入口函数中的JS代码，会等待HTML以及CSS、图片等外引资源全部加载完毕后解析并执行。
+                                     但是一个HTML中只能有一个入口函数,页面只会解析执行一个Window.onload,所以应当将将所有需要操作外部资源的JS放在入口函数中，保证JS能正常执行。
+                                 <pre>
+例：
+    window.onload=function(){
+          alert("页面所有资源已经加载完毕");
+        }
+                             </pre>
+                                 </p>
+                             </li>
+                         </ul>
+                         <ul class="list-group text-info">
+                             <li class="list-group-item text-success h4">变量以及函数的命名</li>
+                             <li class="list-group">
+                                <div class="text-info">
+                                    <p class="text-danger">
+                                        <span class="caret"></span>
+                                        变量命名
+                                    </p>
+                                    <p>
+                                        变量命名应采用小驼峰命名法, 并且前缀应为名词（以此区分函数），并应当尽量在变量名中体现变量所属数据类型（例如count,length/name,title）
+                                        <pre>
+//好的命名
+var maxCount = 10;
+var slideTitle="mySlide";
+
+//不好的命名(含有动词)
+var setCount = 10;
+var getTitle="myTitle";
+
+                                </pre>
+                                    </p>
+                                </div>
+                                <div class="text-info">
+                                    <p class="text-danger">
+                                        <span class="caret"></span>
+                                        函数命名
+                                    </p>
+                                    <p>
+                                        变量命名应采用小驼峰命名法, 并且前缀应为动词（以此区分变量）
+                                        <pre>
+常用的动词约定:
+    has
+    is
+    get
+    set
+    load
+
+
+//例：
+// 是否可阅读
+function canRead() {
+    return true;
+}
+
+// 获取名称
+function getName() {
+    return this.name;
+}
+
+                                </pre>
+                                    </p>
+                                </div>
+                                <div class="text-info">
+                                    <p class="text-danger">
+                                        <span class="caret"></span>
+                                        常量
+                                    </p>
+                                    <p>
+                                        名称全部大写，并用下划线来分割单词
+                                        <pre>
+var MAX_COUNT = 10;
+var URL = 'http://www.baidu.com';
+
+                                </pre>
+                                    </p>
+                                </div>
+                                <div class="text-info">
+                                    <p class="text-danger">
+                                        <span class="caret"></span>
+                                        构造函数
+                                    </p>
+                                    <p>
+                                        大驼峰命名法=>首字母大写
+                                        <pre>
+function Student(name) {
+    this.name = name;
+}
+
+var st = new Student('tom');
+
+                                </pre>
+                                    </p>
+                                </div>
+                             </li>
+                         </ul>
+                     </div>
+               </div>
+           </div>
+        </div>
+    </div>
+    <div class="panel panel-warning">
+        <div class="panel-heading">
+            <h3 class="panel-title">
+                Emmet语法
+                <span class="fr mydpd-toggle glyphicon glyphicon-chevron-down" data-tog="emmet-toggle"></span>
+            </h3>
+        </div>
+        <div class="panel-body emmet-toggle mydpd-target hd">
+            <div class="img-box">
+                <img src="img/emmet.png" alt="" class="img-responsive no-full" id="emmet"/>
+            </div>
+        </div>
+    </div>
+</section>

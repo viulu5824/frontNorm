@@ -1,92 +1,142 @@
 @charset "UTF-8";
+
 /*reset css*/
-*, ::before, ::after{
+*, ::before, ::after {
     /*选中所有的元素，和伪元素*/
     margin: 0;
     padding: 0;
     /*针对移动端*/
     box-sizing: border-box;
-    -webkit-box-sizing: border-box;/*主流移动端浏览器兼容*/
+    -webkit-box-sizing: border-box; /*主流移动端浏览器兼容*/
     /*点击高亮效果清除*/
     -webkit-tap-highlight-color: transparent;
 }
-a{
-    text-decoration:none;
+
+::selection {
+    background-color: #f0ad4e;
+    color: #fff;
 }
-a:visited{
+
+a {
     text-decoration: none;
 }
-a:hover{
-    text-decoration:none;
+
+a:visited {
+    text-decoration: none;
 }
-a:active{
-    text-decoration:none;
+
+a:hover {
+    text-decoration: none;
 }
-body{
-    overflow-x:hidden;
+
+a:active {
+    text-decoration: none;
 }
+
+body {
+    overflow-x: hidden;
+}
+
 table {
     border-collapse: collapse;
 }
-ul, ol ,dl{
+
+ul, ol, dl {
     list-style: none;
 }
-s, i, em,b {
+s, i, em, b {
     font-style: normal;
     text-decoration: none;
-    font-weight:400;
+    font-weight: 400;
 }
+
 h1, h2, h3, h4, h5, h6 {
     text-decoration: none;
     font-weight: normal;
     font-size: 100%;
 }
-fieldset, img, input, button ,textarea,select{
+
+fieldset, img, input, button, textarea, select {
     /*清除移动端输入框特有的样式*/
     -webkit-appearance: none;
     border: none;
     padding: 0;
     margin: 0;
     outline-style: none;
-    vertical-align:middle;
+    vertical-align: middle;
 }
-xmp{
+
+xmp {
     font-size: 18px;
 }
+
 /*base css*/
-.fl{
+.fl {
     float: left;
 }
-.fr{
+
+.fr {
     float: right;
 }
-.oh{
+
+.oh {
     overflow: hidden;
 }
-.ac{
+
+.ac {
     text-align: center;
 }
-.ar{
+
+.ar {
     text-align: right;
 }
-.al{
+
+.al {
     text-align: left;
 }
-.hide{
+
+.hd {
     display: none;
 }
-.block{
+
+.block {
     display: block;
 }
-.vh{
+
+.vh {
     visibility: hidden;
 }
-.fw{
-    font-weight:600;
+
+.fw {
+    font-weight: 600;
 }
-span.mydpd-toggle{
+.mt10{
+    margin: 10px 0;
+}
+.ml10{
+    margin: 0 10px;
+}
+
+span.mydpd-toggle {
     cursor: pointer;
+    -webkit-transition: all 800ms ;
+    -moz-transition: all 800ms ;
+    -ms-transition: all 800ms ;
+    -o-transition: all 800ms ;
+    transition: all 800ms ;
 }
 /*model css*/
-
-
+.rotateZ180{
+    -webkit-transform: rotateZ(-180deg);
+    -moz-transform: rotateZ(-180deg);
+    -ms-transform: rotateZ(-180deg);
+    -o-transform: rotateZ(-180deg);
+    transform: rotateZ(-180deg);
+}
+.addTransition{
+    -webkit-transition: all 800ms ;
+    -moz-transition: all 800ms ;
+    -ms-transition: all 800ms ;
+    -o-transition: all 800ms ;
+    transition: all 800ms ;
+}

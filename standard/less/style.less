@@ -2,13 +2,17 @@
 
 @c: #b8860b;
 @ac: #f7e1b5;
-
 @media (min-width: 0px) {
   /*bootstrap-reset css*/
   body, html {
     width: 100%;
     background: url("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1504591897949&di=0143a90f80b3cfbd36f5186269d05c77&imgtype=0&src=http%3A%2F%2Fwww.gkcgedu.com.cn%2Fuploadfile%2F2012%2F0423%2F20120423061038654.jpg");
     background-size: auto;
+    font-weight: 600;
+  }
+
+  xmp {
+    font-size: 12px;
   }
 
   .container {
@@ -67,24 +71,25 @@
           width: 100%;
           margin: 0 auto;
           > li {
-            border-right: 1px solid #fff;
+            line-height: 50px;
             > a {
               color: #000;
-              border-bottom: 1px solid #fff;
+              transition: all 400ms;
+              transform-style: preserve-3d;
               &:hover {
                 background-color: #f7e1b5;
+                border-radius: 25px;
+                padding: 10px 15px;
+                margin-top: 5px;
               }
             }
             a.active {
               background-color: #f7e1b5;
+              border-radius: 25px;
+              border: 0 none;
+              padding: 10px 15px;
+              margin-top: 5px;
             }
-            //&:nth-last-child(-n+3) {
-            //  float: right;
-            //  a {
-            //    font-size: 26px;
-            //    background-color: #f7e1b5;
-            //  }
-            //}
           }
           > .open > a {
             background-color: #f7e1b5;
@@ -104,7 +109,7 @@
   .norm-content {
     position: relative;
     padding: 35px 0;
-    .projectConstruction, .htmlCssJs,.plugin-API{
+    .projectConstruction, .htmlCssJs, .plugin-API, .frontModule {
       .float-sidebar {
         width: 100px;
         position: absolute;
@@ -176,14 +181,40 @@
         }
       }
     }
-    .plugin-API{
+    .plugin-API {
 
+    }
+    .frontModule {
+      .panel-body {
+        padding: 0;
+      }
+      .panel-body.accordion-toggle {
+        ul {
+          width: 95%;
+          height: 400px;
+          margin: 50px auto;
+          border: 1px solid red;
+          overflow: hidden;
+          li {
+            width: 230px;
+            height: 400px;
+            float: left;
+            img {
+              width: 100%;
+            }
+          }
+        }
+      }
     }
   }
 }
 
 @media (min-width: 768px) {
   /*bootstrap-reset css*/
+  xmp {
+    font-size: 14px;
+  }
+
   //nav
   nav.norm-nav {
     width: 750px;
@@ -215,6 +246,11 @@
 }
 
 @media (min-width: 992px) {
+
+  xmp {
+    font-size: 16px;
+  }
+
   //nav
   nav.norm-nav {
     width: 970px;
@@ -222,6 +258,11 @@
 }
 
 @media (min-width: 1200px) {
+
+  xmp {
+    font-size: 18px;
+  }
+
   //nav
   nav.norm-nav {
     width: 1170px;

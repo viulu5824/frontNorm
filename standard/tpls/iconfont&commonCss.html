@@ -1,119 +1,176 @@
-<div class="commonCss">
+<section class="commonCss">
     <div class="panel panel-warning commonCss-box">
         <div class="panel-heading">
-            <h2 class="panel-title">common.css(逐步更新为适应公司项目的common.css)</h2>
+            <h2 class="panel-title">
+                common.css(逐步更新)
+                <span class="fr mydpd-toggle glyphicon glyphicon-chevron-down" data-tog="commonCss-toggle"></span>
+            </h2>
         </div>
-        <div class="panel-body">
+        <div class="panel-body commonCss-toggle mydpd-target hd">
         <pre>
-            <xmp>
-                @charset "UTF-8";
-                /*reset css*/
-                *, ::before, ::after{
-                /*选中所有的元素，和伪元素*/
-                margin: 0;
-                padding: 0;
-                /*针对移动端*/
-                box-sizing: border-box;
-                -webkit-box-sizing: border-box;/*主流移动端浏览器兼容*/
-                /*点击高亮效果清除*/
-                -webkit-tap-highlight-color: transparent;
-                }
-                a{
-                text-decoration:none;
-                }
-                a:visited{
-                text-decoration: none;
-                }
-                a:hover{
-                text-decoration:none;
-                }
-                a:active{
-                text-decoration:none;
-                }
-                body{
-                overflow-x:hidden;
-                }
-                table {
-                border-collapse: collapse;
-                }
-                ul, ol ,dl{
-                list-style: none;
-                }
-                s, i, em,b {
-                font-style: normal;
-                text-decoration: none;
-                font-weight:400;
-                }
-                h1, h2, h3, h4, h5, h6 {
-                text-decoration: none;
-                font-weight: normal;
-                font-size: 100%;
-                }
-                fieldset, img, input, button ,textarea,select{
-                /*清除移动端输入框特有的样式*/
-                -webkit-appearance: none;
-                border: none;
-                padding: 0;
-                margin: 0;
-                outline-style: none;
-                vertical-align:middle;
-                }
-
-                /*base css*/
-                .fl{
-                float: left;
-                }
-                .fr{
-                float: right;
-                }
-                .oh{
-                overflow: hidden;
-                }
-                .ac{
-                text-align: center;
-                }
-                .ar{
-                text-align: right;
-                }
-                .al{
-                text-align: left;
-                }
-                .hide{
-                display: none;
-                }
-                .block{
-                display: block;
-                }
-                .vh{
-                visibility: hidden;
-                }
-
-
-                /*model css*/
-
-
+            <xmp id="commoncss-html">
+@charset "UTF-8";
+/*reset css*/
+*, ::before, ::after{
+/*选中所有的元素，和伪元素*/
+margin: 0;
+padding: 0;
+/*针对移动端*/
+box-sizing: border-box;
+-webkit-box-sizing: border-box;/*主流移动端浏览器兼容*/
+/*点击高亮效果清除*/
+-webkit-tap-highlight-color: transparent;
+}
+a{
+text-decoration:none;
+}
+a:visited{
+text-decoration: none;
+}
+a:hover{
+text-decoration:none;
+}
+a:active{
+text-decoration:none;
+}
+body{
+overflow-x:hidden;
+}
+table {
+border-collapse: collapse;
+}
+ul, ol ,dl{
+list-style: none;
+}
+s, i, em,b {
+font-style: normal;
+text-decoration: none;
+font-weight:400;
+}
+h1, h2, h3, h4, h5, h6 {
+text-decoration: none;
+font-weight: normal;
+font-size: 100%;
+}
+fieldset, img, input, button ,textarea,select{
+/*清除移动端输入框特有的样式*/
+-webkit-appearance: none;
+border: none;
+padding: 0;
+margin: 0;
+outline-style: none;
+vertical-align:middle;
+}
+/*base css*/
+.fl{
+float: left;
+}
+.fr{
+float: right;
+}
+.oh{
+overflow: hidden;
+}
+.ac{
+text-align: center;
+}
+.ar{
+text-align: right;
+}
+.al{
+text-align: left;
+}
+.hide{
+display: none;
+}
+.block{
+display: block;
+}
+.vh{
+visibility: hidden;
+}
+/*model css*/
             </xmp>
         </pre>
         </div>
     </div>
     <div class="panel panel-warning iconfont-box">
         <div class="panel-heading">
-            <h2 class="panel-title">iconfont字体图标</h2>
+            <h2 class="panel-title">
+                iconfont字体图标
+                <span class="fr mydpd-toggle glyphicon glyphicon-chevron-down" data-tog="iconfont-toggle"></span>
+            </h2>
         </div>
-        <div class="panel-body">
-            在项目中的字体图标，我们引用 <a href=" http://www.iconfont.cn/"> http://www.iconfont.cn/</a>阿里巴巴字体图标库中的图标。
-            <div class="panel panel-warning iconfont-use">
+        <div class="panel-body mydpd-target iconfont-toggle hd">
+            <h4 class="h4">在项目中的字体图标，我们引用 <a href=" http://www.iconfont.cn/"> http://www.iconfont.cn/</a>阿里巴巴字体图标库中的图标。</h4>
+            <div class="panel-warning iconfont-use">
                 <div class="panel-heading">
-                    <h2 class="panel-title">引用方法</h2>
+                    <h4 class="panel-title">iconfont的使用</h4>
                 </div>
                 <div class="panel-body">
-                    <pre>
-                        <xmp>
-
-                        </xmp>
-                    </pre>
+                    <div class="panel">
+                        <ul class="list-group">
+                            <li class="list-group-item h4 text-success">引用地址</li>
+                            <li class="list-group">
+                                <p class="text-info mt10">
+                                    <span class="caret"></span>
+                                    公司所有项目的字体图标放置在阿里图标库中21teacher项目中
+                                </p>
+                            </li>
+                            <li class="list-group">
+                                <img src="img/iconfont3.png" alt="" class="img-responsive"/>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="panel">
+                        <ul class="list-group text-info">
+                            <li class="list-group-item h4 text-success">使用方法</li>
+                            <li class="list-group">
+                                <p>
+                                    <span class="caret"></span>
+                                    主要使用 font class
+                                </p>
+                            </li>
+                            <li class="list-group">
+                                <p><img src="img/iconfont1.png" class="img-responsive" alt=""/></p>
+                            </li>
+                            <li class="list-group">
+                                <p><img src="img/iconfont2.png" class="img-responsive" alt=""/></p>
+                            </li>
+                            <li class="list-group">
+                                HTML中的引用
+                            </li>
+                            <li class="list-group">
+                                <p><img src="img/iconfont4.png" class="img-responsive" alt=""/></p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-warning">
+                <div class="panel-heading">
+                    <h4 class="panel-title">注意事项</h4>
+                </div>
+                <div class="panel-body">
+                    <div class="panel">
+                        <ul class="list-group text-info h5">
+                            <li class="list-group-item"><span class="caret"></span>
+                                21teacher项目中的字体图标只有添加时可以改变类名，一经使用后禁止修改
+                            </li>
+                            <li class="list-group-item"><span class="caret"></span>
+                                字体图标调用使用Font class方式，必须更改为语义化类名才可使用
+                            </li>
+                            <li class="list-group-item"><span class="caret"></span>
+                                临时图标库的图标如果转到21teacher项目图标库进行使用，应立即对临时图标库进行清理。
+                            </li>
+                            <li class="list-group-item"><span class="caret"></span>
+                                获取iconfont图标的css文件链接时，在引用时应当在前面添加http:,以便本地以file:///
+                                查看HTML时能够找到文件，正常显示。
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+</section>
